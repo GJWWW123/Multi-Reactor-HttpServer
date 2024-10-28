@@ -12,11 +12,11 @@ int main(int argc, char* argv[])
         return -1;
     }
     unsigned short port = atoi(argv[1]);
-    // 切换服务器的工作路径
+    // 切换服务器的工作路径 
     chdir(argv[2]);
 #else
     unsigned short port = 5050;
-    chdir("/home/yan/Documents/GitRepo/webServer/Resource");
+    chdir("/home/gjw/Multi-Reactor-HttpServer/Resource");
 #endif
     // 启动服务器
     TcpServer* server = new TcpServer(port, 4);
